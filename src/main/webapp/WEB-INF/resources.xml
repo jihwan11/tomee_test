@@ -1,0 +1,9 @@
+<Resource id="demoDbJtaDS" type="javax.sql.DataSource">
+    DataSourceCreator = tomcat
+    driverClassName = org.postgresql.Driver
+    url = jdbc:postgresql://localhost:5555/demoDB
+    password = password
+    passwordCipher = PlainText
+    userName = postgres 
+</Resource>
+<!-- https://stackoverflow.com/questions/34382661/how-to-avoid-stalled-db-connections-with-tomees-jdbc-connection-pool -->
