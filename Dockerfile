@@ -1,4 +1,4 @@
-FROM quay.octanner.com/base/oct-java:8
+FROM quay.octanner.io/base/oct-java:8
 
 WORKDIR /app
 
