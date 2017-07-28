@@ -2,7 +2,7 @@ FROM quay.octanner.com/base/oct-java:8
 
 WORKDIR /app
 
-COPY . .
+COPY . /app/
 
 RUN mvn clean package tomee:exec
 
