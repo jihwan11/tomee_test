@@ -8,4 +8,4 @@ RUN mvn clean package tomee:exec
 
 EXPOSE 8080
 
-CMD ["java -jar target/test-exec.jar"]
+CMD ["./start.sh"]
