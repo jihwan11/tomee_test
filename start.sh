@@ -1,1 +1,1 @@
-java -jar target/test-exec.jar 
+java -jar target/test-exec.jar
