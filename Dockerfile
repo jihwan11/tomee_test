@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN mvn clean package tomee:exec
+RUN mvn clean package tomee:exec 
 
 EXPOSE 8080
 
