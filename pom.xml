@@ -15,7 +15,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
-
+  
   <dependencies>
     <!-- https://mvnrepository.com/artifact/org.apache.tomee/tomee-embedded -->
     <dependency>
@@ -111,6 +111,21 @@
         <configuration>
           <tomeeVersion>${tomee.version}</tomeeVersion>
           <tomeeClassifier>plus</tomeeClassifier>
+          <inlinedServerXml>
+          	<Server port="8005" shutdown="SHUTDOWN">
+        <Listener className="org.apache.tomee.catalina.ServerListener"/>
+        <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
+        <Service name="Catalina">
+          <Connector port="8080" protocol="HTTP/1.1" />
+          <Engine name="Catalina" defaultHost="jkimtest-voltron.alamoapp.octanner.io">
+            <Host name="jkimtest-voltron.alamoapp.octanner.io" appBase="webapps"
+                  unpackWARs="true" autoDeploy="true">
+            </Host>
+          </Engine>
+        </Service>
+      </Server>
+          </inlinedServerXml>
+          
           <!-- <args>-Dfoo=bar</args> -->
           <!-- <config>${project.basedir}/src//tomee/conf</config> <webapps> 
             <webapp>${project.groupId}:${project.artifactId}:${project.version}?name=${project.artifactId}</webapp> 
