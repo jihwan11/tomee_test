@@ -117,8 +117,8 @@
         <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
         <Service name="Catalina">
           <Connector port="8080" protocol="HTTP/1.1" />
-          <Engine name="Catalina" defaultHost="jkimtest-voltron.alamoapp.octanner.io">
-            <Host name="jkimtest-voltron.alamoapp.octanner.io" appBase="webapps"
+          <Engine name="Catalina" defaultHost="0.0.0.0">
+            <Host name="0.0.0.0" appBase="webapps"
                   unpackWARs="true" autoDeploy="true">
             </Host>
           </Engine>
