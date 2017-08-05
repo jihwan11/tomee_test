@@ -8,7 +8,7 @@ import javax.ws.rs.QueryParam;
 @Path("/hello")
 public class HelloRest {
 	@GET
-	public String sayHello(@DefaultValue("freind") @QueryParam("name") String name){
+	public String sayHello(@DefaultValue("Friend") @QueryParam("name") String name){
 		return "Hello " + name + "!!";
 	}
 }
